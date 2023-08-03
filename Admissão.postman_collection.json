@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "e8b69d63-8334-4a39-beaa-652c78c818e5",
+		"name": "Admissão",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8617555"
+	},
+	"item": [
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "Todos Produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Produto by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/produto/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar Produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Carrinho de Controle Remoto\",\r\n    \"descricao\": \"Super carrinho com controle remoto, com frequência de 2.5ghz\",\r\n    \"preco\": 10.0,\r\n    \"situacao\": \"Ativado\",\r\n    \"categoria_id\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Produto by Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 8,\r\n        \"nome\": \"Carrinho de Controle Remoto editado\",\r\n        \"descricao\": \"Super carrinho com controle remoto, com frequência de 2.5ghz\",\r\n        \"preco\": 10.0,\r\n        \"situacao\": \"Ativado\",\r\n        \"categoria_id\": 6\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/produto/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produtos Filtro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/produto/filtro?nome=Carrinho&categoriaId=1&situacao=Ativado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto",
+								"filtro"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Carrinho"
+								},
+								{
+									"key": "categoriaId",
+									"value": "1"
+								},
+								{
+									"key": "situacao",
+									"value": "Ativado"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Todas Categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Categoria by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categoria/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar Categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"nome\": \"Roupas teste exlusão\",\r\n        \"situacao\": \"Ativado\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Categoria by objeto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n         \"id\": 8,\r\n        \"nome\": \"Roupas teste exlusão editado\",\r\n        \"situacao\": \"Ativado\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias Filtro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categoria/filtro?nome=Brinquedos&situacao=Ativado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria",
+								"filtro"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Brinquedos"
+								},
+								{
+									"key": "situacao",
+									"value": "Ativado"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
