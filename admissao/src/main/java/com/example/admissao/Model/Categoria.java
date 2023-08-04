@@ -15,7 +15,11 @@ public class Categoria {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@jakarta.validation.constraints.NotBlank(message = "Nome é obrigatório")
 	private String nome;
+	
+	@jakarta.validation.constraints.NotBlank(message = "Situação é obrigatório")
 	private String situacao;
 	
 	@OneToMany(cascade = CascadeType.ALL)
